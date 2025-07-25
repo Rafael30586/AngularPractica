@@ -19,6 +19,10 @@ export class ContactComponent {
 
   }
 
+  hasErrors(controlName: string, errorType: string){
+    return this.formularioContacto.get(controlName)?.hasError(errorType) && this.formularioContacto.get(controlName)?.touched
+  }
+
   enviar(){
     console.log(this.formularioContacto)
   }
