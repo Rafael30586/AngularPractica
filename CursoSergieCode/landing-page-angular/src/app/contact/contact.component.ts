@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit, OnDestroy{
 
   formularioContacto: FormGroup
   tipoDni: string = 'DNI'
@@ -22,10 +22,12 @@ export class ContactComponent implements OnInit{
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       apellido: ['', [Validators.required, Validators.minLength(3)]],
       tipoDni: [''], 
-      dni: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.email, Validators.required]]
     })
 
+  }
+  ngOnDestroy(): void {
+    console.log("Se destruyó el componente")
   }
 
   hasErrors(controlName: string, errorType: string){
@@ -58,5 +60,8 @@ export class ContactComponent implements OnInit{
       this.tipoDni = value
     })
   }
+
+  
+  
 
 }
