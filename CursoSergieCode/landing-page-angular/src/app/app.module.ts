@@ -9,6 +9,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DniComponent } from './contact/dni/dni.component';
+import {HttpClientModule} from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { DniComponent } from './contact/dni/dni.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Para formularios de tipo plantilla
-    ReactiveFormsModule // Para formularios de tipo reactivo
+    ReactiveFormsModule, // Para formularios de tipo reactivo
+    HttpClientModule // Para hacer peticiones http
   ],
   providers: [],
   bootstrap: [AppComponent]
