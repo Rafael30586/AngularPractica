@@ -1,0 +1,19 @@
+<h1>List of products</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productsList">
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.title}}</td>
+      <td [ngClass]="{'red' : product.price > 200}">{{product.price | currency}}</td>
+      <button type="button" class="btn btn-outline-danger" [routerLink]="['/products',product.id]">View details</button>
+    </tr>
+  </tbody>
+</table>
