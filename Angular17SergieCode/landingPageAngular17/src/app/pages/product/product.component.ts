@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { IProduct } from '../../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
+  
+  productList: IProduct[] = []
+
+  private _apiService = inject(ApiService)
+
+  ngOnInit(): void {
+    this._apiService.getProducts().subscribe((data: IProduct[])=>{
+      this.productList = data
+    })
+  }
+
 
 }
