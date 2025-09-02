@@ -1,0 +1,12 @@
+.caja{
+    display: flex;
+    gap: 40px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.caja-naranja{
+    background-color: #fc9801;
+    border-radius: 5px;
+    padding: 20px;
+}
