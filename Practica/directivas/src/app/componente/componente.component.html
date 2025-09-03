@@ -6,4 +6,6 @@
     <div class="cajita" appDarClase>Hola</div>
     <img appPonerFoto class="foto">
     <button class="boton-foto" (click)="cambiarFoto()"></button>
+    <div class="cajita" [ngClass]="pinkParty ? 'pink-party' : 'blood-brother'">Hola</div>
+    <button class="boton-color" (click)="cambiarColor()"></button>
 </div>
