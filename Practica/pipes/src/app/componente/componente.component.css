@@ -1,0 +1,33 @@
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.caja-porcentaje{
+    background-color: #7d997b;
+    color: white;
+}
+
+.caja-cambio-letras{
+    background-color: #1bcf13;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.caja-prefijo-sufijo{
+    background-color: #e10f61;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
