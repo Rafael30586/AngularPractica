@@ -31,3 +31,8 @@
     flex-direction: column;
     line-height: 40px;
 }
+
+.caja-presentacion{
+    background-color: #e35972;
+    line-height: 15px;
+}

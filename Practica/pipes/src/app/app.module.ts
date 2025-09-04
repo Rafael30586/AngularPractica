@@ -6,6 +6,7 @@ import { ComponenteComponent } from './componente/componente.component';
 import { PorcentajePipe } from './pipes/porcentaje.pipe';
 import { CambiarLetrasPipe } from './pipes/cambiar-letras.pipe';
 import { PrefijoSufijoPipe } from './pipes/prefijo-sufijo.pipe';
+import { PresentacionPipe } from './pipes/presentacion.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PrefijoSufijoPipe } from './pipes/prefijo-sufijo.pipe';
     ComponenteComponent,
     PorcentajePipe,
     CambiarLetrasPipe,
-    PrefijoSufijoPipe
+    PrefijoSufijoPipe,
+    PresentacionPipe
   ],
   imports: [
     BrowserModule
