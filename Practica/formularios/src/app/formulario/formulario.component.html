@@ -1,0 +1,38 @@
+<form class="formulario" [formGroup]="miFormulario" (ngSubmit)="enviar($event)">
+    <label for="nombre">Nombre: 
+        <input [ngClass]="{'campo-erroneo' : hasErrors('nombre','required') || hasErrors('nombre','minlength')}" type="text" placeholder="Rafael" formControlName="nombre" id="nombre">
+        <span class="mensaje-error" *ngIf="hasErrors('nombre', 'required')">Nombre requerido</span>
+        <span class="mensaje-error" *ngIf="hasErrors('nombre','minlength')">Mínimo 3 letras</span>
+    </label>
+    
+
+    <label for="email">Email: 
+        <input [ngClass]="{'campo-erroneo' : hasErrors('email','required') || hasErrors('email','email')}" type="email" placeholder="f.rafael.javadev305@gmail.com" formControlName="email" id="email">
+        <span class="mensaje-error" *ngIf="hasErrors('email','email')">Email inválido</span>
+        <span class="mensaje-error" *ngIf="hasErrors('email','required')">Email requerido</span>
+    </label>
+    
+
+    <label for="contrasenia">Contraseña:
+        <input [ngClass]="{'campo-erroneo' : hasErrors('contrasenia','required') || hasErrors('contrasenia','minlength')}" type="password" placeholder="123456" formControlName="contrasenia" id="contrasenia"> 
+        <span class="mensaje-error" *ngIf="hasErrors('contrasenia','required')">Contraseña requerida</span>
+        <span class="mensaje-error" *ngIf="hasErrors('contrasenia','minlength')">Mínimo 6 caracteres</span>
+    </label>
+    
+
+    <label for="fecha-nacimiento">Fecha de nacimiento: 
+        <input type="date" formControlName="fechaNacimiento" id="fecha-nacimiento">
+    </label>
+    
+
+    <label for="telefono">Teléfono: 
+        <input type="tel" placeholder="0351-156754046" formControlName="telefono" id="telefono">
+    </label>
+
+    <label for="peso-kilogramos">Peso en kilogramos: 
+        <input type="number" placeholder="69" min="5" formControlName="pesoKilogramos" id="peso-kilogramos">
+    </label>
+
+    <button type="submit" class="boton-submit">Enviar</button>
+    
+</form>
