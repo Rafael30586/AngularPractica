@@ -1,0 +1,16 @@
+.contenedor-boton{
+    display: flex;
+    justify-items: center;
+    align-items: end;
+    gap: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.boton-cambio{
+    background-color: #7fbafd;
+    width: 70%;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+}
