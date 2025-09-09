@@ -1,0 +1,21 @@
+.barra-navegacion{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    background-color: #229aa6;
+    align-items: center;
+    color: white;
+}
+
+.barra-navegacion > a{
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    text-decoration: none;
+    color: inherit; /*Esto sirve para remover el color por defecto del enlace*/
+}
+
+.barra-navegacion > a:hover{
+    opacity: 0.8;
+}
